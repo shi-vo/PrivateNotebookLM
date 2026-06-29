@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/
+
+# Uploaded documents, the FAISS index, and processed metadata are
+# user-generated local data, not source — never commit them.
+data/uploads/*
+data/faiss_index/*
+data/processed/*
+data/tiktoken_cache/
+!data/uploads/.gitkeep
+!data/faiss_index/.gitkeep
+!data/processed/.gitkeep

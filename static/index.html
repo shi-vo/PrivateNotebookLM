@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contract Review &amp; Q&amp;A</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Contract Review &amp; Q&amp;A</h1>
+    <p class="subtitle">Local, private contract analysis — answers grounded only in the documents you upload.</p>
+  </header>
+
+  <div id="healthBanner" class="banner hidden"></div>
+
+  <main>
+    <!-- 1. Upload -->
+    <section class="card" id="uploadSection">
+      <h2>1. Upload documents</h2>
+      <div class="upload-row">
+        <input type="file" id="fileInput" accept=".pdf,.docx,.txt" multiple>
+        <button id="uploadBtn" type="button">Upload</button>
+      </div>
+      <ul id="uploadStatusList" class="status-list"></ul>
+    </section>
+
+    <!-- 2. Document selector -->
+    <section class="card" id="docSection">
+      <h2>2. Choose scope</h2>
+      <div class="doc-select-row">
+        <label for="docSelect">Ask about:</label>
+        <select id="docSelect">
+          <option value="all" selected>All Documents</option>
+        </select>
+      </div>
+      <ul id="docList" class="doc-list"></ul>
+    </section>
+
+    <!-- 3. Chat -->
+    <section class="card" id="chatSection">
+      <h2>3. Ask a question</h2>
+      <div id="chatWindow" class="chat-window">
+        <div class="empty-state" id="chatEmptyState">
+          Upload a contract above, then ask things like "What is the termination notice period?"
+        </div>
+      </div>
+      <div id="thinkingIndicator" class="thinking hidden">Thinking…</div>
+      <form id="chatForm" class="chat-form">
+        <input type="text" id="questionInput" placeholder="Ask a question about your documents..." autocomplete="off">
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
